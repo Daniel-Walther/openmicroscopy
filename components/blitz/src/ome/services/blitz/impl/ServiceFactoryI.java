@@ -48,6 +48,8 @@ import omero.api.IProjectionPrx;
 import omero.api.IProjectionPrxHelper;
 import omero.api.IQueryPrx;
 import omero.api.IQueryPrxHelper;
+import omero.api.IReceptorLightServicePrx;
+import omero.api.IReceptorLightServicePrxHelper;
 import omero.api.IRenderingSettingsPrx;
 import omero.api.IRenderingSettingsPrxHelper;
 import omero.api.IRepositoryInfoPrx;
@@ -95,6 +97,7 @@ import omero.constants.PROJECTIONSERVICE;
 import omero.constants.QUERYSERVICE;
 import omero.constants.RAWFILESTORE;
 import omero.constants.RAWPIXELSSTORE;
+import omero.constants.RECEPTORLIGHTSERVICE;
 import omero.constants.RENDERINGENGINE;
 import omero.constants.RENDERINGSETTINGS;
 import omero.constants.REPOSITORYINFO;
@@ -307,6 +310,11 @@ public final class ServiceFactoryI extends omero.cmd.SessionI implements _Servic
 
     public IQueryPrx getQueryService(Ice.Current current) throws ServerError {
         return IQueryPrxHelper.uncheckedCast(getByName(QUERYSERVICE.value,
+                current));
+    }
+
+    public IReceptorLightServicePrx getReceptorLightService(Ice.Current current) throws ServerError {
+        return IReceptorLightServicePrxHelper.uncheckedCast(getByName(RECEPTORLIGHTSERVICE.value,
                 current));
     }
 

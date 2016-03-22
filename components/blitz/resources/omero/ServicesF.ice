@@ -90,6 +90,7 @@ module omero {
         interface IPixels;
         interface IProjection;
         interface IQuery;
+        interface IReceptorLightService;
         interface IRoi;
         interface IScript;
         interface ISession;

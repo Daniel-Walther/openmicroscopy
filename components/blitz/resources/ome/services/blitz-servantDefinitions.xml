@@ -197,6 +197,15 @@
     </constructor-arg>
   </bean>
 
+  <bean id="omero.api.IReceptorLightService" class="omero.api._IReceptorLightServiceTie" singleton="false">
+    <constructor-arg>
+        <bean class="ome.services.blitz.impl.ReceptorLightServiceI">
+            <constructor-arg ref="managed-ome.api.IReceptorLightService"/>
+            <constructor-arg ref="throttlingStrategy"/>
+        </bean>
+    </constructor-arg>
+  </bean>
+
   <bean id="omero.api.IRenderingSettings" class="omero.api._IRenderingSettingsTie" singleton="false">
     <constructor-arg>
         <bean class="ome.services.blitz.impl.RenderingSettingsI">

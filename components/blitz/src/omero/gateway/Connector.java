@@ -65,6 +65,8 @@ import omero.api.IProjectionPrx;
 import omero.api.IProjectionPrxHelper;
 import omero.api.IQueryPrx;
 import omero.api.IQueryPrxHelper;
+import omero.api.IReceptorLightServicePrx;
+import omero.api.IReceptorLightServicePrxHelper;
 import omero.api.IRenderingSettingsPrx;
 import omero.api.IRenderingSettingsPrxHelper;
 import omero.api.IRepositoryInfoPrx;
@@ -355,6 +357,19 @@ class Connector
         return IQueryPrxHelper.uncheckedCast(
                 get(omero.constants.QUERYSERVICE.value,
                         unsecureClient == null));
+    }
+
+    /**
+     * Returns the {@link IReceptorLightServicePrx} service.
+     * 
+     * @return See above.
+     * @throws Throwable Thrown if the service cannot be initialized.
+     */
+    IReceptorLightServicePrx getReceptorLightService()
+             throws DSOutOfServiceException
+    {
+        return IReceptorLightServicePrxHelper.uncheckedCast(
+                get(omero.constants.SEARCH.value, unsecureClient == null));
     }
 
     /**

@@ -95,6 +95,7 @@ module omero {
     const string PIXELSSERVICE    = "omero.api.IPixels";
     const string PROJECTIONSERVICE= "omero.api.IProjection";
     const string QUERYSERVICE     = "omero.api.IQuery";
+    const string RECEPTORLIGHTSERVICE  = "omero.api.IReceptorLightService";
     const string SESSIONSERVICE   = "omero.api.ISession";
     const string SHARESERVICE     = "omero.api.IShare";
     const string TIMELINESERVICE  = "omero.api.ITimeline";

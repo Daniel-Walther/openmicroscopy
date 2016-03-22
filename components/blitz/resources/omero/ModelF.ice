@@ -59,7 +59,7 @@ module omero {
         class Share;
         class TextAnnotation;
         class Well;
-
+        class Plasmid;
     };
 
 };

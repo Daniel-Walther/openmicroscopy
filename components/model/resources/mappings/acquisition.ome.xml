@@ -888,4 +888,18 @@
 		<entry name="Other"/>
 		<entry name="Unknown"/>
 	</enum>
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	ReceptorLight Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+-->
+        <type id="ome.model.core.Plasmid">
+            <properties>
+                <required name="Name" type="string"/>
+                <required name="PlasmidId" type="int"/>
+                <required name="Description" type="string"/>
+                <required name="Link" type="string"/>
+            </properties>
+        </type>
 </types>

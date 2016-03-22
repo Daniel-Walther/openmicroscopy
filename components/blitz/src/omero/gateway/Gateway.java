@@ -48,6 +48,7 @@ import omero.api.IMetadataPrx;
 import omero.api.IPixelsPrx;
 import omero.api.IProjectionPrx;
 import omero.api.IQueryPrx;
+import omero.api.IReceptorLightServicePrx;
 import omero.api.IRenderingSettingsPrx;
 import omero.api.IRepositoryInfoPrx;
 import omero.api.IRoiPrx;
@@ -579,6 +580,23 @@ public class Gateway {
         Connector c = getConnector(ctx, true, false);
         if (c != null)
             return c.getQueryService();
+        return null;
+    }
+
+    /**
+     * Returns the {@link IReceptorLightServicePrx} service.
+     * 
+     * @param ctx
+     *            The {@link SecurityContext}
+     * @return See above.
+     * @throws DSOutOfServiceException
+     *             Thrown if the service cannot be initialized.
+     */
+    public IReceptorLightServicePrx getReceptorLightService(SecurityContext ctx)
+            throws DSOutOfServiceException {
+        Connector c = getConnector(ctx, true, false);
+        if (c != null)
+            return c.getReceptorLightService();
         return null;
     }
 
