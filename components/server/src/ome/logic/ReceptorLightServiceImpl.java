@@ -26,6 +26,7 @@ public class ReceptorLightServiceImpl extends AbstractLevel1Service implements I
         return IReceptorLightService.class;
     }
     
+    @Override
     @RolesAllowed("user")
     @SuppressWarnings("unchecked")
     public Plasmid getPlasmid(long id)

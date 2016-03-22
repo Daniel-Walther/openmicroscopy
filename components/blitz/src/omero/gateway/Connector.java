@@ -369,7 +369,7 @@ class Connector
              throws DSOutOfServiceException
     {
         return IReceptorLightServicePrxHelper.uncheckedCast(
-                get(omero.constants.SEARCH.value, unsecureClient == null));
+                get(omero.constants.RECEPTORLIGHTSERVICE.value, unsecureClient == null));
     }
 
     /**
